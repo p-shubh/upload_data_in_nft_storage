@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email OTP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #001015;
+            border-collapse: collapse;
+        }
+
+        .logo-container {
+            background-color: #001820;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo-container img {
+            width: 120px;
+            height: 30px;
+        }
+
+        .content {
+            padding: 25px;
+        }
+
+        .content h2{
+          font-family: "Poppins", sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          color:white;
+          font-size:24px;
+        }
+
+        .content .hi{
+          font-family: "Poppins", sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          color:white;
+          font-size:16px;
+          opacity:80%;
+        }
+
+
+        .content .one-time-password{
+         font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color:white;
+          font-size:14px;
+          opacity:50%;
+        }
+
+
+        .otp-code{
+        font-family: "Poppins", sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          color:white;
+          font-size:24px;
+          
+        }
+
+        .otp-code {
+            display: block;
+            background-color: #001820;
+            text-align: center;
+            padding: 10px;
+            margin: 20px 0;
+            letter-spacing: 4px;
+            border-radius:5px;
+        }
+
+        .content .verfication{
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color:white;
+          font-size:14px;
+          opacity:50%;
+        }
+
+    
+
+        .details-table {
+            width: 450px;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        .details-table .devives{
+         font-family: "Poppins", sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          color:white;
+          background-color: #001820;
+          font-size:14px;
+        }
+
+
+        .details-table td {
+            padding: 10px;
+            border: 1px solid #002233;
+        }
+
+        .details-table .ip{
+         font-family: "Poppins", sans-serif;
+          font-weight: 500;
+          font-style: normal;
+          color:white;
+          font-size:14px;
+          opacity:50%;
+        }
+
+
+        .recognize{
+          font-family: "Poppins", sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          color:white;
+          font-size:14px;
+        }
+
+        .recognize span {
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color:white;
+          font-size:14px;
+          opacity:50%;
+        }
+
+
+
+        .recognize span a{
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color:#FEC66D;
+          font-size:14px;
+          text-decoration: none;
+        }
+
+        .message{
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color:white;
+          font-size:14px;
+          opacity:50%;
+        }
+
+
+        .container-share {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #002233;
+    border-radius: 5px;
+}
+
+.container-share .stay {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    padding-right: 20px; 
+}
+
+.icon-cell {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #002233;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.icon-cell img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.spacer-cell {
+    width: 5px; 
+}
+
+
+        
+
+
+
+
+
+        .risk{
+         font-family: "Poppins", sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          color:white;
+          font-size:12px;
+        }
+
+
+        .digital{
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color:white;
+          font-size:12px;
+          opacity:50%;
+          line-height:18px;
+        }
+
+        .bit{
+         font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color:#FEC66D;
+          font-size:12px;
+          cursor: pointer;
+          
+        }
+
+        .asset{
+            padding-bottom:5px;
+        }
+
+        .receiving,.more{
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color:white;
+          font-size:12px;
+          opacity:50%;
+        }
+
+        .asset-container{
+            padding-top:40px;
+        }
+
+
+        .infotech{
+          font-family: "Poppins", sans-serif;
+          font-weight: 500;
+          font-style: normal;
+          color:white;
+          font-size:12px;
+          opacity:50%;
+        }
+
+
+
+
+      
+    </style>
+</head>
+<body>
+    <table class="container">
+        <tr>
+            <td class="logo-container">
+                <img src="./images/bit24hr.png" alt="Bit24HR Logo">
+            </td>
+        </tr>
+
+
+
+        <tr>
+            
+            <td class="content">
+                <h2>Login Verification</h2>
+                <p class="hi">Hi SUBHX INFOTECH OPC,</p>
+                <p class="one-time-password">Here is your One-Time Password (OTP) to log in to your <br/> BIT24HR account</p>
+                <div class="otp-code">659426</div>
+                <p class="verfication">This verification code is valid for 30 minutes. To ensure the security of your account, keep this code confidential and do not share it.</p>
+                
+                
+                
+                
+                
+                <table class="details-table">
+                    <tr>
+                        <td class="devives">Device</td>
+                        <td class="ip">Chrome 129.0 - Mac 14.16</td>
+                    </tr>
+                    <tr>
+                        <td class="devives">IP Address</td>
+                        <td class="ip">103.178.176.100</td>
+                    </tr>
+                    <tr>
+                        <td class="devives">Location</td>
+                        <td class="ip">Jaipur, India</td>
+                    </tr>
+                </table>
+
+
+
+                <p class="recognize">If you don't recognize this activity, <span>please <a href="#">reset your password</a> and get in touch with customer support immediately.</span></p>
+                <p class="message">This is an automated message; please do not reply.</p>
+
+
+
+                        <!--all icon-->
+             
+                        <table class="container-share">
+                            <tr>
+                                <td class="stay">
+                                    Stay Connected ~                            
+                                </td>
+                        
+                                <td class="icon-cell">
+                                    <img src="./images/instagram.png" width="15" height="15"/>
+                                </td>
+                                <td class="spacer-cell"></td> 
+                        
+                                <td class="icon-cell">
+                                    <img src="./images/facebook.png" width="15" height="15"/>
+                                </td>
+                                <td class="spacer-cell"></td> 
+                        
+                                <td class="icon-cell">
+                                    <img src="./images/twitter.png" width="15" height="15"/>
+                                </td>
+                                <td class="spacer-cell"></td> <
+                        
+                                <td class="icon-cell">
+                                    <img src="./images/teligram.png" width="15" height="15"/>
+                                </td>
+                                <td class="spacer-cell"></td> 
+                        
+                                <td class="icon-cell">
+                                    <img src="./images/whatsapp.png" width="15" height="15"/>
+                                </td>
+                                <td class="spacer-cell"></td> 
+                        
+                                <td class="icon-cell">
+                                    <img src="./images/linkdine.png" width="15" height="15"/>
+                                </td>
+                            </tr>
+                        </table>
+                        
+
+
+
+                    <div class="asset-container">
+                        <p class="asset"><span class="risk">Risk Warning:</span> <span class="digital">
+                            Digital asset prices are subject to volatility. The value of your investment may fluctuate, and you may not recover the full amount invested. You are solely responsible for your investment decisions, and <span class="bit">bit24hr.in</span> is not liable for any losses you may experience. This does not constitute financial advice. For more details, please refer to our <span class="bit">Terms of Use</span> and <sapn class="bit">Risk Warning</sapn>
+                        </span></p>
+                    </div>
+
+
+                    <p class="asset"><span class="risk">Please Note:</span> <span class="digital">
+                        Be aware of phishing sites and always ensure you are visiting the official BIT24HR website starting with <span class="bit">"https://"</span> and containing <span class="bit">"bit24hr.in"</span> Look for the padlock icon to ensure the site is secure
+                    </span></p>
+
+
+                    <p class="asset"><span class="risk">Security Enhancement:</span> <span class="digital">
+                        To further enhance your security and protect your account, please set up your anti-phishing code by following the link provided <span class="bit">here.</span>This added layer of protection will help safeguard your information against potential phishing attempts.
+                    </span></p>
+
+
+
+                   <p class="receiving">
+                        You are receiving this email because you are a registered user of <span class="bit">bit24hr.in</span>
+                    </p>
+
+                    <p class="more">
+                        Yor more information on how we process data, please see our <span class="bit">Privacy Policy.</span>
+                    </p>
+
+                    
+
+
+
+
+
+                
+            
+            
+            
+            
+            </td>
+
+        </tr>
+
+
+        <tr>
+            <td class="logo-container">
+               <h1 class="infotech">© 2024 SubhX Infotech, All Rights Reserved.</h1>
+            </td>
+        </tr>
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </table>
+</body>
+</html>
